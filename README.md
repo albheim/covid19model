@@ -1,5 +1,61 @@
 ![](https://github.com/ImperialCollegeLondon/covid19model/workflows/CI/badge.svg)
 
+================================================================================
+
+# Reproduction of results with swedish modifications
+This repository has the same content as the Imperial College covid19model 
+
+https://github.com/ImperialCollegeLondon/covid19model/commit/da9a8a9eb853ec60cd19d40c1293db72884dfb25
+
+except for that the data files 
+
+/data/COVID-19-up-to-date.csv <br/>
+/data/COVID-19-up-to-date.rds 
+
+are replaced with later versions containing information up to April 29. 
+
+This README only differs by this first section. 
+To be able to run the code you can hence follow the instructions under **Installing dependencies** given below.
+
+As four ourself, we used anaconda in a linux environment. 
+For extra clarity we are here stating our procedure explicitly:
+
+**1)** First, make two copies of the folder covid19model-master to be used with modified swedish intervention dates.
+
+**2)** In your two copied folders, modify the file /data/interventions.csv in two **separate** ways
+
+	i) set the swedish date for 'Schools + Universities' to 18.03.2020
+	ii) set the swedish date for 'Public events' to 12.03.2020
+ 
+**3)** Install anaconda: https://docs.anaconda.com/anaconda/install/
+
+**4)** Step into the directory covid19model-master
+
+```
+cd ./covid19model-master
+```
+
+**5)** Set up and actviate the environment
+
+```
+conda env create -f environment.yml
+```
+```
+conda activate covid19model
+```
+
+**6)** Run the code in full-mode
+
+```
+Rscript base.r base --full
+```
+
+**7**) Repeat step **4** and **6** for the two remaining folders. Observe that you do not have to redo step **5**; use the same environment in all cases.
+
+**Additional note:** The readme-information below contains an error: it is stated that the full version uses 4000 iterations with 2000 warmups and 4 chains, while in fact it uses 1800 iterations with 1000 warmups and 5 chains, as can be seen in base.r (line 77).
+
+================================================================================
+
 # covid19model
 Code for modelling estimated deaths and cases for COVID19 from Report 13 published by MRC Centre for Global Infectious Disease Analysis, Imperial College London: [Estimating the number of infections and the impact of nonpharmaceutical interventions on COVID-19 in 11 European countries](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-13-europe-npi-impact/) 
 
