@@ -20,7 +20,7 @@ To be able to run the code you can hence follow the instructions under **Install
 As four ourself, we used anaconda in a linux environment. 
 For extra clarity we are here stating our procedure explicitly:
 
-**1)** First, make two copies of the folder covid19model-master to be used with modified swedish intervention dates.
+**1)** First, make two copies of the folder covid19model master to be used with modified swedish intervention dates.
 
 **2)** In your two copied folders, modify the file /data/interventions.csv in two **separate** ways
 
@@ -29,10 +29,10 @@ For extra clarity we are here stating our procedure explicitly:
  
 **3)** Install anaconda: https://docs.anaconda.com/anaconda/install/
 
-**4)** Step into the directory covid19model-master
+**4)** Step into the directory covid19model
 
 ```
-cd ./covid19model-master
+cd ./covid19model
 ```
 
 **5)** Set up and actviate the environment
