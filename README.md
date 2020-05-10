@@ -1,5 +1,26 @@
 ![](https://github.com/ImperialCollegeLondon/covid19model/workflows/CI/badge.svg)
 
+================================================================================
+
+# Reproduction of results with swedish modifications
+This repository has the same content as the Imperial College covid19model 
+
+https://github.com/ImperialCollegeLondon/covid19model/commit/da9a8a9eb853ec60cd19d40c1293db72884dfb25
+
+except for that the data files 
+
+/data/COVID-19-up-to-date.csv <br>
+/data/COVID-19-up-to-date.rds 
+
+are replaced with versions containing information only up to March 28, and the inclusion of the python script R0_comparison.py. 
+
+This README only differs by this first section. 
+To be able to run the code you can hence follow the instructions under **Installing dependencies** given below.
+
+To produce the figure included in the paper, use R0_comparison.py (requires the modules numpy, pandas and matplotlib); replace the data paths placeholder with the appropriate information.
+
+================================================================================
+
 # covid19model
 Code for modelling estimated deaths and cases for COVID19 from Report 13 published by MRC Centre for Global Infectious Disease Analysis, Imperial College London: [Estimating the number of infections and the impact of nonpharmaceutical interventions on COVID-19 in 11 European countries](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-13-europe-npi-impact/) 
 
