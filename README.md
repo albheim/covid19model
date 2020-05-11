@@ -7,17 +7,17 @@ This repository has the same content as the Imperial College covid19model
 
 https://github.com/ImperialCollegeLondon/covid19model/commit/da9a8a9eb853ec60cd19d40c1293db72884dfb25
 
-except for that the data files 
+except for two directories with ecdc data files 
 
-/data/COVID-19-up-to-date.csv <br>
-/data/COVID-19-up-to-date.rds 
+/data/mar28/ <br>
+/data/apr29
 
-are replaced with versions containing information only up to March 28, and the inclusion of the python script R0_comparison.py. 
+which contain files with data for corresponding date. Copy the files from a directory and replace the existing files in the /data folder. We also include the python script R0_comparison.py which plots a comparison of R0 for these two dates. 
 
 This README only differs by this first section. 
 To be able to run the code you can hence follow the instructions under **Installing dependencies** given below.
 
-To produce the figure included in the paper, use R0_comparison.py (requires the modules numpy, pandas and matplotlib); replace the data paths placeholder with the appropriate information.
+To produce the figure included in the paper, use R0_comparison.py (requires the modules numpy, pandas and matplotlib); replace the data paths placeholder with paths to corresponding result for each date.
 
 ================================================================================
 
