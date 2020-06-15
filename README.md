@@ -2,7 +2,7 @@
 
 ================================================================================
 
-# Reproduction of results with only Sweden and UK
+# Reproduction of results base code with last intervention removed (figure 2b)
 This repository has the same content as the Imperial College covid19model 
 
 https://github.com/ImperialCollegeLondon/covid19model/tree/885466d8658dff50faac10d88f989fd1076dfea0
