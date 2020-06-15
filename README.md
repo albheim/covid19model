@@ -1,5 +1,17 @@
 ![](https://github.com/ImperialCollegeLondon/covid19model/workflows/CI/badge.svg)
 
+================================================================================
+
+# Reproduction of results with only Sweden and UK
+This repository has the same content as the Imperial College covid19model 
+
+https://github.com/ImperialCollegeLondon/covid19model/tree/885466d8658dff50faac10d88f989fd1076dfea0
+
+This README only differs by this first section. 
+To be able to run the code you can hence follow the instructions under **Installing dependencies** given below.
+
+================================================================================
+
 # covid19model
 Code for modelling estimated deaths and infections for COVID-19 from ["Estimating the effects of non-pharmaceutical interventions on COVID-19 in Europe"](https://www.nature.com/articles/s41586-020-2405-7), Flaxman, Mishra, Gandy et al, Nature, 2020, the published version of our original [Report 13](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-13-europe-npi-impact/).
 
