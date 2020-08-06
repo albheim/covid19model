@@ -117,7 +117,10 @@ process_covariates <- function(countries, interventions, d, ifr.by.country,N2){
   # Creating last intervention which is different sweden
   X2 = array(0,c(stan_data$M,N2,7))
   X2[,,1:6] = stan_data$X
-  X2[which(countries == "Sweden"),,7] = X2[which(countries == "Sweden"),,3]
+  # Replaced Sweden definition with general code to find last intervention for all countries
+  for(i in 1:nrow(countries)) {
+    X2[i,,7] <- apply(X2[i,,X2[i,127,]==1], 1, prod)
+  }
   stan_data$X = X2
   stan_data$P = 7
   return(list("stan_data" = stan_data, "dates" = dates, "reported_cases"=reported_cases, "deaths_by_country" = deaths_by_country))
