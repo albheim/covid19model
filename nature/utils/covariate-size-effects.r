@@ -14,15 +14,16 @@ plot_covars <- function(filename){
                    "Self Isolation",
                    "Public Events",
                    "First Intervention",
-                   "Lockdown", 'Social distancing')
+                   "Lockdown", 
+                   "Social distancing")
   colnames(alpha) = plot_labels
-  first.intervention = alpha[,c(1,2,3,5,6)] + alpha[,4]
+  first.intervention = alpha[,c(1,2,3,6)] + alpha[,4]
   data1 = mcmc_intervals_data(first.intervention,prob=.95,transformation=function(x) 1-exp(-x),point_est="mean")
   data1$type = "First Intervention"
   
-  data2 = mcmc_intervals_data(alpha[,c(1,2,3,5,6)],  prob = .95,transformation=function(x) 1-exp(-x),point_est="mean")
+  data2 = mcmc_intervals_data(alpha[,c(1,2,3,6)],  prob = .95,transformation=function(x) 1-exp(-x),point_est="mean")
   data2$type = "Later Intervention"
-  data = rbind(data1,data2[1:5,])
+  data = rbind(data1,data2[1:4,])
   colQuantiles(data.matrix(first.intervention),probs=c(.025,.975))
   
   levels(data$parameter) = gsub("t(", "", levels(data$parameter), fixed=TRUE)

@@ -13,7 +13,10 @@ nature/data/interventions.rds
 
 nature/utils/process-covariates.r
 
-to set lockdown to not have happened and to update the `last_intervention` parameter for all countries.
+nature/utils/covariate-size-effects.r
+
+to set lockdown to not have happened, to update the `last_intervention` parameter for all countries and to remove lockdown from the plot (since it now only reflects the prior). We also add the figures from the simulation in the nature/figures/ folder.
+
 
 This README only differs by this first section. 
 To be able to run the code you can hence follow the instructions under **Installing dependencies** given below.
